@@ -192,7 +192,7 @@ var ViewPager = React.createClass({
 
     this.props.animation(this.state.scrollValue, scrollStep, gs)
       .start((event) => {
-        if (event.finished) {
+        if (event.finished || true) {
           this.fling = false;
           this.childIndex = nextChildIdx;
           this.state.scrollValue.setValue(nextChildIdx);
